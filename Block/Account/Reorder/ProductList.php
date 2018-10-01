@@ -87,7 +87,7 @@ class ProductList extends ListProduct
      *
      * @return AbstractCollection
      */
-    protected function _getProductCollection()
+    public function _getProductCollection()
     {
         if ($this->_productCollection === null) {
             $orders = $this->orderCollectionFactory->create()->addFieldToFilter('customer_id', ['eq' => $this->customerSession->getCustomerId()]);
